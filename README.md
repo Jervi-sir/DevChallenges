@@ -1,7 +1,5 @@
-echo "# DevChallenges" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
+git add ./folder
+git commit -m ""
 git branch -M main
 git remote add origin https://github.com/Jervi-sir/DevChallenges.git
 git push -u origin main
