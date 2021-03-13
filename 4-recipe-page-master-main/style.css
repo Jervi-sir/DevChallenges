@@ -1,0 +1,371 @@
+/* Color Palette 
+
+	black  : #000000;
+	gray1  : #4F4F4F;
+	gray2  : #BDBDBD;
+	gray3  : #333333;
+	gray4  : #BDBDBD;
+	orange : #F2994A;
+
+*/
+/*---- fonts ----*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+/*---- Global ----*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*----Title-----*/
+.title {
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 32px;
+
+	color: #000000;
+}
+
+
+
+/*----Resume-----*/
+.resume {
+	display: flex;
+}
+
+.resume p {
+	font-family: Montserrat;
+	font-style: italic;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 15px;
+
+	color: #4F4F4F;
+}
+
+.resume p {
+	margin: 2px;
+	margin-left: 10px;
+}
+
+/*---- Image ----*/
+.image img {
+	width: 100%;
+	border-radius: 1vh;
+}
+
+/*---- quick Details ---*/
+.quick-details .right h4{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 8px;
+	line-height: 10px;
+	text-transform: uppercase;
+	margin: 0;
+
+	color: #BDBDBD;
+}
+
+.quick-details .right span{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 12px;
+	margin: 0;
+
+	color: #333333;
+}
+
+.quick-details .right {
+	margin-left: 6px;
+}
+
+.quick-details .local_dining {
+	color: #F2994A;
+}
+
+.quick-details .item:last-child .right h4 {
+	color: #F2994A;
+}
+.quick-details {
+	display: flex;
+	flex-wrap: wrap-reverse;
+}
+
+.quick-details .item {
+	display: flex;
+	margin: 1.3em 0;
+	margin-right: 2em;
+}
+
+
+/*---- ingredients -----*/
+.ingredients h5 {
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+
+	color: #333333;	
+}
+
+.ingredients h3 {
+	font-family: Playfair Display;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 21px;
+
+	color: #333333;
+}
+
+.ingredients div {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 25px;
+
+	color: #333333;
+}
+.ingredients .item {
+	display: block;
+}
+
+.ingredients div {
+	display: flex;
+}
+
+.checkbox {
+	height: 20px;
+	width: 20px;
+}
+
+.ingredients div span {
+	margin-left: 4px;
+	width: 40vh;
+}
+
+
+/*--- Instructions --*/
+
+.instructions .item p {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+	margin-top: 0;
+
+	color: #000000;
+
+}
+
+.instructions .item {
+	display: flex;
+
+} 
+
+
+.instructions ol {
+	max-width: 350px;
+	counter-reset: counter;
+	list-style: none;
+	padding-left: 40px;
+
+}
+
+.instructions ol li {
+	margin: 0 0 0.5rem 0;
+	counter-increment: counter;
+	position: relative;
+	margin-bottom: 2em;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+
+	color: #000000;
+}
+
+.instructions ol li:before {
+	content: counter(counter);
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	color: white;
+	text-align: center;
+
+	position: absolute;
+	--size: 32px;
+	left: calc(-1 * var(--size) - 10px);
+	line-height: var(--size);
+	width: var(--size);
+	height: var(--size);
+	top: 0;
+	background: #F2994A;
+	border-radius: 10%;
+	height: 4.9vh;
+
+}
+
+
+
+/*---- Source ---*/
+
+.source {
+	font-family: Montserrat;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 150%;
+
+	color: #BDBDBD;
+}
+
+
+
+
+/*---- Footer -----*/
+footer {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+
+	color: #A9A9A9;
+}
+
+footer {
+	margin-top: 5em;
+	text-align: center;
+}
+
+
+
+
+/*---- Body ----*/
+body {
+	padding-left: 5px;
+	padding-right: 5px;
+
+}
+
+
+
+/*----Larger screen ----*/
+
+@media screen and (min-width: 789px) {
+	
+	body {
+		width: 70vw;
+		margin: auto;
+	}
+
+	/*-- title --*/
+	.title {
+		margin-top: 1.5em;
+		font-size: 48px;
+	}
+
+	/*--- resume ---*/
+	.resume {
+		font-size: 14px;
+		width: 80%;
+		margin-bottom: 2em;
+	}
+
+
+	/*--- main ----*/
+	main {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+
+	}
+
+	main .left {
+		order: 1;
+		padding-left: 5px;
+	}
+
+	main .right {
+		order: 2;
+
+	}
+	
+	/*--- quick details ---*/
+
+	.quick-details {
+		display: grid;
+		width: 100%;
+	}
+
+	.quick-details .item {
+		order: 2;
+	}
+
+	.quick-details .item:last-child {
+		order: 1;
+	}
+
+	.quick-details {
+		background: #FFFFFF;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+		border-radius: 12px;
+		width: 60%;	
+		margin-left: auto;
+		margin-right: 0;
+	}
+
+	.quick-details .item {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.quick-details .right h4 {
+		font-size: 10px;
+		line-height: 12px;
+	}
+
+	.quick-details .right span {
+		font-size: 14px;
+		line-height: 17px;
+	}
+
+	/*---- Instructions ---*/
+	.instructions ol {
+		max-width: 100%;
+	}
+
+	.ingredients div span {
+		width: 100%
+	}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+

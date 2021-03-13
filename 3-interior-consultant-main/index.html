@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,  maximum-scale=5"/>
+
+    <link rel="icon" href="images/devchallenges.png" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  </head>
+  <body>
+    <nav>
+      <div class="button">
+        <p>
+          This Interior
+        </p>
+      </div>
+      <div id="hamburger">
+        <input type="checkbox" onchange='showMenu(this);'>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+
+      <ul id="menu">
+        <a href="#">Home</a>
+        <a href="#">Collection</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </ul>
+
+    </nav>
+
+    <ul id="phone-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Collection</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <main>
+      <div class="left">
+        <h1>
+          Modern interior
+        </h1>
+        <p>
+          A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.
+        </p>
+        <a href="#">
+          Read more
+          <span></span>
+        </a>
+      </div>
+      <div class="right">
+        <img src="images/photo1.png">
+        <div class="outer-card">
+          <div class="card">
+            <div class="item">
+              <div class="left">
+                <img src="images/photo2.png">
+              </div>
+              <div class="right">
+                <h3>Aliza Webber</h3>
+                <h5>Interior designer</h5>
+              </div>
+            </div>
+            <div class="item">
+              Designed in 2020 by Aliza Webber
+            </div>
+          </div>   
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <span class="line"></span>
+        Your name @ DevChallenges.io
+      </p>
+    </footer>
+
+    <script>
+      function showMenu(checkbox) {
+        var menu = document.getElementById("phone-menu");
+        if(checkbox.checked == true) {
+          menu.style.opacity = "1";
+          menu.style.transform = "translate( 0, 0)";
+        }
+        else {
+          menu.style.transform = "translate( -100%, 0)";
+        }
+      }
+    </script>
+  </body>
+</html>

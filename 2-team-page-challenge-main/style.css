@@ -1,0 +1,184 @@
+/*	Color Palette
+
+	black : #000000;
+	gray  : #A9A9A9;
+
+*/
+
+/*****Global******/
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/*****Style Touches*****/
+
+/*Header*/
+body {
+	color: #000000;
+}
+
+header .left {
+	font-family: PT Serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 48px;
+	letter-spacing: -0.045em;
+
+	color: #000000;
+
+	padding-top: 1vh;
+}
+
+header .right {
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 27px;
+	text-transform: uppercase;
+
+	color: #000000;
+}
+
+header .right p {
+	text-transform: none;
+	font-weight: normal;
+}
+
+
+.job {
+	font-family: PT Serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+
+	text-transform: uppercase;
+	color: #000000;
+	writing-mode: vertical-rl;
+	padding-left: .5vh;
+}
+
+.name {
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 27px;
+	margin-top: .5em;
+
+	color: #000000;
+}
+
+footer {
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 27px;
+	text-align: center;
+	color: #000000;
+}
+
+
+
+/*----[Structure]-----*/
+
+@media screen and (min-width: 790px) {
+
+	body {
+		width: 80%;
+		color: #000000;
+		margin: auto;
+	    padding:0rem 10rem;
+
+	}
+
+	header {
+		margin-top: 2vh;
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-columns: 1fr 1fr;
+		padding: 0 3rem;
+
+	}
+
+
+	img {
+		width: 80%;
+	}
+	.image {
+		display: flex;
+	}
+
+	.card-layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		padding: 3rem;
+	}
+	.card {
+		margin: 1vh 0;
+	}
+	.card:nth-child(2), 
+	.card:nth-child(5) {
+		margin-top: 10vh;
+	}
+
+
+}
+
+@media screen and (max-width: 1330px) and (min-width: 791px) {
+	body {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+
+@media screen and (max-width: 789px) {
+	
+	body {
+		padding: 0 1em;
+	}
+
+	header {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.image {
+		display: flex;
+	}
+
+	img {
+		width: 85%;
+	}
+
+	.card-layout {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+	}
+
+	.card {
+		width: 100%;
+		flex: 50%; 
+		margin: 1vh auto;
+
+	}
+
+	.card:nth-child(2n) {
+		margin-top: 6vh;
+	}
+	.card:nth-child(2n-1) {
+	} 
+
+	footer {
+		margin-top: 2vh;
+	}
+}

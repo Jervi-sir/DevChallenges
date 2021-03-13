@@ -1,0 +1,181 @@
+/* Color Pallet
+	
+	gray 1 : #333333;
+	gray 2 : #4F4F4F;
+*/
+
+
+/*****Global******/
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/*****Style Touches*****/
+/*Header*/
+.header h3 {
+	font-family: Inconsolata;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 3.5vh;
+	line-height: 2vh;
+	letter-spacing: -0.08em;
+	text-transform: uppercase;
+
+	color: #333333;
+	margin: 7vh 9vh;
+}
+
+/*main-right*/
+.main-right .t {
+	font-family: Space Mono;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 5.7vh;
+	line-height: 8vh;
+	letter-spacing: -0.035em;
+
+	color: #333333;
+}
+
+.main-right .p {
+	font-family: Space Mono;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 2.3vh;
+	line-height: 3.5vh;
+	letter-spacing: -0.035em;
+	
+	color: #4F4F4F;
+}
+
+.main-right button {
+	background: #333333;
+	padding: .5vh 3.2vh;
+
+}
+
+
+.btn p {
+	font-family: Space Mono;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.8vh;
+	line-height: 2.7vh;
+	letter-spacing: -0.035em;
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+}
+
+/*main-left*/
+.main-left {
+	display: flex;
+}
+.main-left img {
+	margin: auto;
+	width: 70%;
+
+}
+
+/*footer*/
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 1.8vh;
+	line-height: 2.3vh;
+
+	color: #333333;
+}
+
+/*--Organization--*/
+@media screen and (min-width: 481px) {
+
+	.main-right .btn {
+		display: flex;
+		margin: auto 0;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin: 0 1.2em;
+	}
+
+	.main {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
+		grid-gap: 1em 0;
+		width: 80%;
+		margin: auto;
+	}
+
+	.main-right {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-gap: 0.5em 0;
+	}
+
+	.main-right .p {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+	.header h3 {
+		margin-left: 0;
+		margin-top: 1em;
+	}	
+	body {
+		display: block;
+		margin: 0 1.2em;
+
+	}
+
+	.main, .main-right {
+		display: grid;
+		grid-template-rows: 1fr ;
+		grid-template-columns: 1fr;
+		grid-gap: 1em 0;
+	}
+
+	.main-right {
+		grid-gap: 1em 0;
+	}
+
+	.main {
+		margin-bottom: 2vh;
+	}
+
+
+	.main-right .p {
+		width: 100%;
+	}
+
+	.main-right .btn {
+		display: flex;
+		margin: 4vh 0 ;
+	}
+
+
+
+}
+
+

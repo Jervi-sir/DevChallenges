@@ -1,0 +1,327 @@
+/*---- Color palette 
+
+	orange: #F7542E;
+	grey1 : #4F4F4F;
+	grey2 : #9E9E9E;
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+/*----[[Global]]-----*/
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:after, *:before {
+	box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+
+.page {
+    display: flex;
+    padding: 3rem;
+    padding-left: 8vw;
+}
+aside {
+    width: 17vw;
+}
+
+
+/*---{styling}----*/
+h1 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: #4F4F4F;
+}
+/*---aside---*/
+aside {
+    header {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 19px;
+    
+        color: black;
+
+        span {
+            color: #F7542E;
+            padding: 0;
+            margin-right: 0;
+        }
+    }
+
+    ul {
+        padding-left: 0;
+        margin-top: 10vh;
+        list-style-type: none;
+        li {
+            font-family: Noto Sans JP;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+        
+            color: #9E9E9E;
+            margin-bottom: 2vh;
+        }
+        
+        li.active {
+            font-weight: bold;
+        
+            color: #090F31;
+        }
+
+    }
+}
+
+
+.row {
+    display: flex;
+    margin-bottom: 3vh;
+    width: 100%;
+    :first-child {
+        width: 16vw;
+    }
+    input {
+        width: 60%;
+    }
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    p {
+        font-family: Ubuntu Mono;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 12px;
+
+        color: #333333;
+    }
+
+    .light {
+        color: #828282;  
+    }
+
+    label {
+        font-family: Noto Sans JP;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 17px;
+        color: #333333;
+        margin-bottom: 5px;
+    }
+
+    input::placeholder {
+        font-family: Noto Sans JP;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+
+        color: #828282;
+    }
+
+    input {
+        border: 1.5px solid #828282;
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding: 1.1rem;
+    }
+
+    
+    //1 default 
+    &.default {
+        .input .item input {
+            border-color: #828282;
+        }
+
+        .hover .item input {
+            border-color: #333333;
+        }
+
+        .focus .item {
+            label {
+                color: #2962FF;
+            }
+            input {
+                border-color: #2962FF;
+            }
+        }
+
+    }
+
+    //2 error 
+    &.error {
+        .input,
+        .focus {
+            .item {
+                label {
+                    color: #D32F2F;
+                }
+                input {
+                    border-color: #D32F2F;
+                }
+            }
+        }
+        .hover .item input {
+            border-color: #333333;
+        }
+    }
+
+    //3 disabled 
+    &.disabled {
+        .input .item {
+            input {
+                background: #F2F2F2;
+                border-color: #E0E0E0;
+            }
+        }
+    }
+
+    //4 helper 
+    &.helper {
+        .helper-text {
+            font-family: Noto Sans JP;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 14px;
+            color: #828282;
+        }
+        
+        .default .item {
+            input {
+                border-color: #828282;
+            }
+        }
+        
+        .error {
+            .item {
+                label {
+                    color: #D32F2F;
+                }
+
+                input {
+                    border-color: #D32F2F;
+                }
+            }
+            .helper-text {
+                color: #D32F2F;
+            }
+        }
+
+    }
+
+    //5 with-icons
+
+    //6 text
+    &.text {
+        input::placeholder {
+            font-family: Noto Sans JP;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+
+            color: #333333;
+        }
+
+    }
+
+    //7 size 
+    &.size {
+        .sm {
+            input {
+                padding: .5rem;
+            }
+        }
+
+        .md {
+            input {
+                padding: 1.2rem;
+            }
+        }
+    }
+
+    //8 fullwidth 
+
+    .fullwidth {
+        width: 100%;
+        input {
+            width: 100%;
+        }
+
+        input::placeholder {
+            font-family: Noto Sans JP;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+
+            color: #333333;
+        }
+    }
+
+    //9 textarea 
+    &.textarea {
+        textarea {
+            border: 1px solid #828282;
+            border-radius: 8px;
+            resize: none;
+        }
+
+        textarea::placeholder {
+            font-family: Noto Sans JP;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            
+            color: #828282; 
+            padding: 1rem; 
+        }
+    }
+
+
+}
+
+
+footer {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #A9A9A9;
+    padding-left: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+

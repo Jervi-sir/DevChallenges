@@ -1,0 +1,414 @@
+/*  Color Panlette
+
+	black  : #4E5150;
+	gray1  : #F2F2F2;
+	gray2  : #333333;
+	gray3  : #4F4F4F;
+	gray4  : #828282;
+	gray5  : #E0E0E0;
+	orange : #F2994A;
+
+*/
+
+
+/*---- fonts ----*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+/*---- Global ----*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+}
+
+/*--- [styling] ---*/
+/*header*/
+header h1,
+.header h1 {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29px;
+
+	color: #4E5150;
+}
+
+
+/*- right -*/
+.right .inner {
+	background: #F2F2F2;
+	border-radius: 1em;
+}
+/*list*/
+.right .item .details h3 {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 15px;
+
+	color: #4E5150;
+}
+
+.right .item .details span {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+
+	color: #F2994A;
+}
+
+.right .item .details span strike {
+	font-size: 10px;
+	line-height: 12px;
+	text-decoration-line: line-through;
+
+	color: #4E5150;	
+}
+
+
+.right .item .quantity span {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+
+	color: #333333;
+}
+/*total*/
+.total span {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+
+	color: #333333;
+}
+.total div {
+	border-top: 1px solid #BDBDBD;
+}
+
+
+/*-left-*/
+.material-icons {
+	color: #828282;
+}
+
+.left label {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 10px;
+	line-height: 12px;
+
+	color: #4F4F4F;	
+}
+
+.left h2 {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+
+	color: #333333;	
+}
+
+.left input {
+	border: transparent;
+}
+
+
+.left input::placeholder,
+select {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;`
+	font-size: 12px;
+	line-height: 15px;
+
+	color: #828282;
+}
+
+
+.input input:focus, 
+.input select:focus {
+	outline: none;
+}
+
+.input select {
+	border: transparent;
+}
+
+.input {
+	border: 1px solid #828282;
+	border-radius: 12px;	
+}
+
+
+
+.shipping .full-width:first-of-type input::placeholder {
+	color: #333333;
+}
+
+
+.confirm button {
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+
+	color: #FFFFFF;
+  	border-color: transparent;
+	background: #F2994A;
+	border-radius: 12px;
+
+}
+
+/*-footer-*/
+footer {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+
+	color: #A9A9A9;
+}
+
+
+/*---[Structure]---*/
+
+/*--{Phone}--*/
+/*-left-*/
+.input {
+	display: flex;
+}
+
+.material-icons {
+	margin: 7px;
+
+}
+
+.material-icons.size-icon { font-size: 1.3em; }
+
+.full-width,
+.row-width {
+	margin-top: .9em;
+	width: 100%;
+}
+
+.row-width {
+	display: flex;
+}
+
+.half-width {
+	width: 46%;
+}
+.gap-width {
+	width: 8%;
+}
+.half-width input {
+	width: 70%;
+}
+
+.selectdiv {
+	width: 73%;
+}
+
+.selectdiv:after {
+	color: red;
+}
+
+
+.confirm .full-width {
+	display: flex;
+}
+
+.confirm input {
+	margin: 0;
+	margin-right: .5em;
+}
+
+.confirm label {
+	margin-top: 1px;
+}
+
+.confirm .left,
+.confirm .right {
+	width: 46%;
+}
+
+.confirm button {
+	padding: 1em 2.5em;
+	width: 100%;
+}
+
+/*-right-*/
+
+.right .list .item {
+	display: flex;
+	margin-bottom: 1.5em;
+}
+
+img {
+	width: 100%;
+	border-radius: 1em;
+}
+.right .list .item .left {
+	width: 40%;
+}
+
+.right .list .item .right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 60%;
+	margin-left: 1em;
+}
+
+.right .list .item .right h3 {
+	margin-top: 0;
+}
+
+.right .list .item .right .details span{
+	margin-right: 1em;
+}
+
+.page .inner {
+	padding: 2em;
+}
+
+
+.quantity .minus,
+.quantity .plus {
+	background: #E0E0E0;
+	color: #828282;
+	font-size: 20px;
+	border-color: transparent;
+	border-radius: .4em;
+}
+
+.quantity {
+	display: flex;
+	width: 70%;
+	justify-content: space-around;
+	border: 1px solid #828282;
+	border-radius: .6em; 
+	padding: .5em 0;
+	margin-bottom: .8vh;
+}
+
+.quantity span {
+	padding-top: .5vh;
+}
+
+/*total*/
+
+.page .right .total {
+	margin-top: 3em;
+}
+
+.page .right .total .line {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1em;
+}
+
+
+.page {
+	margin-bottom: 5em;
+}
+
+/*-footer-*/
+footer {
+	text-align: center;
+}
+
+/*--Phone screen--*/
+@media screen and (max-width: 767px) {
+	.header {
+		display: none;
+	}
+
+	body {
+		margin: 0 1em;
+
+	}
+	.page {
+		display: grid;
+	}
+
+	.page >.left {
+		order: 2;
+	}
+
+	.page >.right {
+		order: 1;
+		margin-bottom: 2em;
+	}
+}
+
+
+/*--Large screen--*/
+@media screen and (min-width: 768px) {
+	header {
+		display: none;
+	}
+
+	.header {
+		margin-bottom: 4vh;
+	}
+	.page .right .inner {
+		margin-top: 8vh;
+	}
+
+
+	.page {
+		display: flex;
+		justify-content: center;
+	}
+
+	.page .left {
+		margin-right: 2em;
+	}
+
+	.page >.right {
+		width: 21em;
+		margin-left: 2em;
+	}
+
+	body {
+		height: 100vh;
+		display: flex;
+    	flex-direction: column;
+    	justify-content: space-between;
+	}
+
+	.page {
+		margin-top: 7vh;
+	}
+
+	footer {
+		margin-bottom: 1em;
+	}
+
+
+	
+}
+
+

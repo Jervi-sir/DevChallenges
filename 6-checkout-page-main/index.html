@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=5"/>
+
+    <link rel="icon" href="images/devchallenges.png" />
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+
+    <title>checkout</title>
+
+
+  </head>
+  <body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <div class="page" id="app">
+      <div class="left">
+        <div class="header">
+          <h1>Checkout</h1>
+        </div>
+        <!-- Contact -->
+        <div class="contact">
+          <h2>Contact information</h2>
+
+          <div class="full-width">
+            <label>E-mail</label><br>
+            <div class="input">
+              <span class="material-icons size-icon ">email</span>
+              <input type="text" placeholder="Enter your email...">
+            </div>
+          </div>
+
+          <div class="full-width">
+            <label>Phone</label><br>
+            <div class="input">
+              <span class="material-icons size-icon">call</span>
+              <input type="text" placeholder="Enter your phone...">
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Shipping -->
+        <div class="shipping">
+          <h2>Shipping address</h2>
+
+          <div class="full-width">
+            <label>Full name</label><br>
+            <div class="input">
+              <span class="material-icons size-icon">account_circle</span>
+              <input type="text" placeholder="Rodney Cotton">
+            </div>
+          </div>
+
+          <div class="full-width">
+            <label>Address</label><br>
+            <div class="input">
+              <span class="material-icons size-icon">home</span>
+              <input type="text" placeholder="Your address..">
+            </div>
+          </div>
+
+          <div class="full-width">
+            <label>City</label><br>
+            <div class="input">
+              <span class="material-icons size-icon">location_city</span>
+              <input type="text" placeholder="Your city..">
+            </div>
+          </div>
+
+          <div class="row-width">
+            <div class="half-width">
+              <label>Country</label><br>
+              <div class="input">
+                <span class="material-icons size-icon">location_city</span>
+                <select id="items" class="selectdiv">
+                  <option value="" selected disabled hidden>Your country..</option>
+                  <option value="1">Algeria</option>
+                  <option value="2">Algeria again</option>
+                  <option value="3">Algeria again n again</option>
+                  <option value="4">Algeria again n again n again</option>
+                </select>
+              </div>
+            </div>
+            <div class="gap-width">
+              
+            </div>
+            <div class="half-width">
+              <label>Postal code</label><br>
+              <div class="input">
+                <span class="material-icons size-icon">markunread_mailbox</span>
+                <input type="text" placeholder="Your postal code...">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Confirm -->
+        <div class="confirm">
+          <!-- Checkbox -->
+          <div class="full-width">
+            <input type="checkbox" >
+            <label>Save this information for next time</label><br>
+          </div>
+
+          <!-- button -->
+          <div class="full-width">
+            <div class="left">
+            </div>
+            <div class="gap-width">
+            </div> 
+            <div class="right">
+              <button>Continue</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="right">
+        <div class="inner">
+          <div class="list">
+            <div class="item">
+              <div class="left">
+                <img src="images/photo1.png">
+              </div>
+              <div class="right">
+                <div class="details">
+                  <h3>Vintage Backbag</h3>
+                    <span>${{ item1.new }}</span>
+                    <span><strike>${{ item1.old }}</strike></span>
+                </div>
+                <div class="quantity">
+                  <button class="minus" v-on:click="q1('-1')">-</button>
+                  <span>{{ quantity1 }}</span>
+                  <button class="plus" v-on:click="q1('+1')">+</button>
+                </div>
+              </div>
+            </div> 
+            <div class="item">
+              <div class="left">
+                <img src="images/photo2.png">
+              </div>
+              <div class="right">
+                <div class="details">
+                  <h3>Levi Shoes</h3>
+                  <span>${{ item2.new }}</span>
+                  <span><strike>${{ item2.old }}</strike></span>
+                </div>
+                <div class="quantity">
+                  <button class="minus" v-on:click="q2('-1')">-</button>
+                  <span>{{ quantity2 }}</span>
+                  <button class="plus" v-on:click="q2('+1')">+</button>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="total">
+            <div class="line">
+              <span>Shipping</span>
+              <span>${{shipping}}</span>
+            </div>
+            <div class="line">
+              <span>Total</span>
+              <span>${{total}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      Jervi @ DevChallenge
+    </footer>
+
+    <!-- Vue js -->
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          item1: {
+            new: 54.99,
+            old: 94.99
+          },
+          item2: {
+            new: 74.99,
+            old: 124.99
+          },
+          quantity1: 1,
+          quantity2: 1,
+          shipping: 19,
+        },
+        methods: {
+          q2 : function(event) {
+            if(event == '+1')
+              this.quantity2 ++;
+            else
+              this.quantity2 --;
+
+            if(this.quantity2 <= 0)
+              this.quantity2 = 0;
+
+            if(this.quantity2 >= 10)
+              this.quantity2 = 10;
+            
+          },
+          q1 : function(event) {
+            if(event == '+1')
+              this.quantity1 ++;
+            else
+              this.quantity1 --;
+
+            if(this.quantity1 <= 0)
+              this.quantity1 = 0;
+
+            if(this.quantity1 >= 10)
+              this.quantity1 = 10;
+            
+          }
+        },
+        computed: {
+          total: function() {
+            if(!(this.quantity2 || this.quantity1)) {
+              return 0;
+            }
+          return ((this.item1.new * this.quantity1 + this.item2.new * this.quantity2) + this.shipping).toFixed(2)
+          }
+        }
+      })
+
+    </script>
+
+  </body>
+</html>

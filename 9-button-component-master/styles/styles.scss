@@ -1,0 +1,393 @@
+/*---- Color palette 
+
+	orange: #F7542E;
+	grey1 : #4F4F4F;
+	grey2 : #9E9E9E;
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+/*----[[Global]]-----*/
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:after, *:before {
+	box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+/*---{styling}----*/
+
+/*---aside---*/
+aside {
+    header {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 19px;
+    
+        color: black;
+
+        span {
+            color: #F7542E;
+            padding: 0;
+            margin-right: 0;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        li {
+            font-family: Noto Sans JP;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+        
+            color: #9E9E9E;
+        }
+        
+        li.active {
+            font-weight: bold;
+        
+            color: #090F31;
+        }
+
+    }
+}
+
+
+
+/*-- Main --*/
+
+main {
+    h1 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+    
+        color: #4F4F4F;
+    }
+
+    .row {
+        .button,
+        .hover,
+        .text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .button label {
+            font-family: Ubuntu Mono;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 12px;
+            margin-bottom: 1vh;
+        
+            color: #333333;
+        }
+
+        .hover label,
+        .text label {
+            font-family: Ubuntu Mono;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 12px;
+            text-align: center;
+            margin-bottom: 1vh;
+        
+            color: #828282;
+        }
+
+        button {
+            border-radius: 6px; 
+            border-style: none;
+            padding: .5em 1em;
+            margin: auto;
+            margin-left: 0;
+        }
+
+        &.link  {
+            font-family: Ubuntu Mono;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 12px;
+            margin-bottom: 0;
+            color: red;
+        }
+        
+    }
+}
+/* default -1- */
+.default{
+    .button button {
+        background: #E0E0E0;
+        box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+    }
+
+    .hover button{
+        background: #AEAEAE;
+        box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+    }
+} 
+
+/* outline -2- */
+.outline{
+    .button button {
+        background: transparent;
+        border: 1px solid #3D5AFE;
+        color: #3D5AFE;
+    }
+
+    .hover button{
+        background: rgba(41, 98, 255, 0.1);
+        border: 1px solid #3D5AFE;
+        color: #3D5AFE;
+    
+    }
+} 
+
+/* text -3- */
+.text {
+    .button button {
+        background: transparent;
+        border: transparent;
+        color: #3D5AFE;
+    }
+
+    .hover button{
+        background: rgba(41, 98, 255, 0.1);
+        color: #3D5AFE;
+    }
+    
+}
+
+/* disableShawdow -4- */
+.disableShadow{
+    .button button {
+        background: #3D5AFE;
+        color: #FFFFFF;
+    }
+} 
+
+/* disable -5- */
+.disable {
+    .button button {
+        background: #E0E0E0;
+        color: #9E9E9E;
+    }   
+    .text{
+        button{
+            background: transparent;
+            color: #9E9E9E;
+        }
+    } 
+
+} 
+
+/* local_grocery_store -6- */
+.local_grocery_store {
+    .start button{
+        background: #2962FF;
+        box-shadow: 0px 2px 3px rgba(0, 49, 202, 0.2);
+        color: #ffffff;
+    }
+    .end button{
+        background: #2962FF;
+        box-shadow: 0px 2px 3px rgba(0, 49, 202, 0.2);
+        color: #ffffff;
+    }
+    
+}
+
+/* sm md lg -7- */
+.size button {
+    background: #2962FF;
+    box-shadow: 0px 2px 3px rgba(0, 49, 202, 0.2);
+    color: white;
+}
+
+/*-- Color -8-  */
+.color {
+    /*default*/
+    .default{
+        .button button {
+            background: #E0E0E0;
+            box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);	
+            color: #3F3F3F;
+        } 
+        .hover button{
+            background: #AEAEAE;
+            box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);	
+            color: #3F3F3F;
+        }
+    }
+    /*primary*/
+    .primary{
+        .button button {
+            background: #2962FF;
+            box-shadow: 0px 2px 3px rgba(41, 98, 255, 0.2);
+            color: #ffffff;
+        }
+        .hover button{
+            background: #0039CB;
+            box-shadow: 0px 2px 3px rgba(41, 98, 255, 0.2);	
+            color: #ffffff;
+        }
+    } 
+    /*secondary*/
+    .secondary {
+        .button button {
+            background: #455A64;
+            box-shadow: 0px 2px 3px rgba(69, 90, 100, 0.2);
+            color: white;
+        }
+        .hover button{
+            background: #1C313A;
+            box-shadow: 0px 2px 3px rgba(69, 90, 100, 0.2);	
+            color: white;
+        } 
+    } 
+
+    /*danger */
+    .danger {
+        .button button {
+            background: #D32F2F;
+            box-shadow: 0px 2px 3px rgba(211, 47, 47, 0.2);
+            color: white;
+        }
+        .hover button{
+            background: #9A0007;
+            box-shadow: 0px 2px 3px rgba(211, 47, 47, 0.2);	
+            color: white;
+        }
+    } 
+
+
+
+} 
+
+
+footer {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 15px;
+
+	color: #A9A9A9;	
+}
+
+
+
+/*--- [[structure]] ---*/
+.page {
+    display: flex;
+    padding: 2vw;
+    padding-bottom: 0;
+}
+
+aside {
+    width: 15vw;
+
+    ul {
+        margin-top: 15vh;
+        padding-left: 0;
+        li {
+            margin-bottom: 2vh;
+        }
+    }
+}
+
+main{
+    width: 85vw;
+    .row {
+        display: flex;
+        margin-bottom: 4vh;
+    }
+} 
+
+@for $i from 1 through 6 {
+
+    .row:nth-of-type(#{$i}) {
+        .button {
+            width: 12vw;
+        }
+
+        .start {
+            width: 17vw;
+        }
+
+        .end {
+            width: 25vw;
+        }
+    }
+}
+
+.row.size {
+    max-width: 30vw;
+    justify-content: space-between;
+
+    .button {
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        margin: auto;
+        margin-left: 0;
+    }
+    .sm button{
+        padding: 0.4rem;
+    }
+    .md button{
+        padding: .7rem 1rem;
+    }
+    .lg button {
+        padding: 1rem 1.5rem;
+    }
+}
+
+.row.color {
+    width: 45vw;
+    justify-content: space-between;
+}
+.column {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .hover label {
+        text-align: left !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
